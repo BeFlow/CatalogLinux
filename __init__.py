@@ -446,7 +446,7 @@ def newMenuItem(restaurant_id):
     	session.commit()
     	flash('New Menu %s Item Successfully Created' % (newItem.name))
     	return redirect(url_for('showMenu', restaurant_id=restaurant_id))
-	else:
+    else:
     	return render_template('newmenuitem.html', restaurant_id=restaurant_id)
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit',

@@ -388,7 +388,7 @@ def deleteRestaurant(restaurant_id):
         session.delete(restaurantToDelete)
         flash('%s Successfully Deleted' % restaurantToDelete.name)
         session.commit()
-    return redirect(url_for('showRestaurants',
+    	return redirect(url_for('showRestaurants',
                             restaurant_id=restaurant_id))
 
     else:

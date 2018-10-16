@@ -442,12 +442,10 @@ def newMenuItem(restaurant_id):
 
                            user_id=restaurant.user_id)
 
-    session.add(newItem)
-
-    session.commit()
-    flash('New Menu %s Item Successfully Created' % (newItem.name))
-    	return redirect(url_for('showMenu', restaurant_id=restaurant_id)
-    		)
+    	session.add(newItem)
+    	session.commit()
+    	flash('New Menu %s Item Successfully Created' % (newItem.name))
+    	return redirect(url_for('showMenu', restaurant_id=restaurant_id))
 	else:
     	return render_template('newmenuitem.html', restaurant_id=restaurant_id)
 
